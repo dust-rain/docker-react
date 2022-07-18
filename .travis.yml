@@ -4,8 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t dustrain/docker-react -f Docerfile.dev .  
+  - docker build -t dustrain/docker-react -f Dockerfile.dev .  
 
 script:
   - docker run -e CI=true dustrain/docker-react npm run test
-  
